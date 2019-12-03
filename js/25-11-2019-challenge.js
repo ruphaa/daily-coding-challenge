@@ -1,7 +1,9 @@
 // Challenge #1
 /* create a function that removes the first and last letters of a string. 
 Strings with two characters or less are considered invalid. 
-You can choose to have your function return null or simply ignore. */
+You can choose to have your function return null or simply ignore.
+https://dev.to/thepracticaldev/daily-challenge-1-string-peeler-4nep
+ */
 
 var stripFirstAndLastString = (str) => str.length > 2 ? str.slice(1,-1) : undefined;
 
@@ -17,6 +19,7 @@ Your task is to return a string that displays a diamond shape on the screen usin
 *****
  *** 
   *  
+https://dev.to/thepracticaldev/daily-challenge-2-string-diamond-21n2
 */ 
 var printSpaceAndAsterisk = function(space, str, i) {
   for(let j=1;j<=space/2;j++) {
@@ -57,7 +60,9 @@ console.log(diamond(11));
 /* Write a function that returns the number (count) of vowels in a given string. 
 Letters considered as vowels are: a, i, e, o, and u. 
 The function should be able to take all types of characters as input, including lower case letters, 
-upper case letters, symbols, and numbers. */
+upper case letters, symbols, and numbers. 
+https://dev.to/thepracticaldev/daily-challenge-3-vowel-counter-34ni
+*/
 
 const vowelCount = function(str) {
   let regex = /[aeiou]/i;
@@ -70,7 +75,9 @@ console.log(vowelCount('css'));          // 0
 console.log(vowelCount('4$eiaa'));       // 4
 
 // Challenge #4 - In Progress
-/* You are given a small checkbook to balance that is given to you as a string. Sometimes, this checkbook will be cluttered by non-alphanumeric characters.
+/*
+https://dev.to/thepracticaldev/daily-challenge-4-checkbook-balancing-hei 
+You are given a small checkbook to balance that is given to you as a string. Sometimes, this checkbook will be cluttered by non-alphanumeric characters.
 
 The first line shows the original balance. Each other (not blank) line gives information: check number, category, and check amount.
 
