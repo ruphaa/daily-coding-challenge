@@ -1,4 +1,5 @@
 // Day 1
+// https://github.com/h5bp/Front-end-Developer-Interview-Questions/blob/master/src/questions/coding-questions.md
 
 // Question 1: What is the value of foo?
 var foo = 10 + "20";
@@ -120,3 +121,34 @@ function foo2() {
 }
 
 // returns undefined - automatic semicolon insertion in js
+
+// Day 2
+// What will be the output?
+
+var y = 1;
+if (function f() {}) {
+  y += typeof f;
+}
+console.log(y);
+
+// "1undefined" - Because
+
+//  Implementation of duplicate function
+
+const duplicate = function(arr) {
+  return [...arr, ...arr];
+};
+
+const duplicateWithSlice = arr => {
+  return arr.concat(arr.slice(0));
+};
+
+console.log(duplicate([1, 2, 3, 4, 5]));
+
+console.log(duplicateWithSlice([1, 2, 3, 4, 5, 6]));
+
+// What will be returned by each of these?
+
+console.log("hello" || "world"); // hello
+
+console.log("foo" && "bar"); // bar
