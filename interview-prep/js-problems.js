@@ -15,7 +15,7 @@ add(2, 5); // 7
 add(2)(5); // 7
 
 const add = (a, b) => a + b;
-const add = a => b => a + b;
+const add = (a) => (b) => a + b;
 
 // Question 4: What value is returned from the following statement?
 "i'm a lasagna hog"
@@ -32,7 +32,7 @@ window.foo || (window.foo = "bar");
 
 // Question 6: What is the outcome of the two alerts below?
 var foo = "Hello";
-(function() {
+(function () {
   var bar = " World";
   alert(foo + bar);
 })();
@@ -59,10 +59,10 @@ foo.x = foo = { n: 2 };
 
 // Question 9: What does the following code print?
 console.log("one");
-setTimeout(function() {
+setTimeout(function () {
   console.log("two");
 }, 0);
-Promise.resolve().then(function() {
+Promise.resolve().then(function () {
   console.log("three");
 });
 console.log("four");
@@ -76,11 +76,11 @@ console.log("four");
 
 // Question 10: What is the difference between these four promises?
 
-doSomething().then(function() {
+doSomething().then(function () {
   return doSomethingElse();
 });
 
-doSomething().then(function() {
+doSomething().then(function () {
   doSomethingElse();
 });
 
@@ -93,7 +93,7 @@ doSomething().then(doSomethingElse);
 
 // Question 11: What will the code below output to the console and why ?
 
-(function() {
+(function () {
   var a = (b = 3);
 })();
 
@@ -107,7 +107,7 @@ console.log("b defined? " + (typeof b !== "undefined"));
 
 function foo1() {
   return {
-    bar: "hello"
+    bar: "hello",
   };
 }
 
@@ -135,11 +135,11 @@ console.log(y);
 
 //  Implementation of duplicate function
 
-const duplicate = function(arr) {
+const duplicate = function (arr) {
   return [...arr, ...arr];
 };
 
-const duplicateWithSlice = arr => {
+const duplicateWithSlice = (arr) => {
   return arr.concat(arr.slice(0));
 };
 
@@ -152,3 +152,33 @@ console.log(duplicateWithSlice([1, 2, 3, 4, 5, 6]));
 console.log("hello" || "world"); // hello
 
 console.log("foo" && "bar"); // bar
+
+// Write a function the reverses a string
+
+const reverseAString = (str) => {
+  return str.split("").reverse().join("");
+};
+
+// Write a function that filters out numbers from a list
+
+const filterNosFromList = (list) => {
+  return list.filter((item) => !isNaN(item));
+};
+
+// There is a flaw in the above function => if input is [1,2,3,false,"hello"]
+// Expected => [1,2,3] but result => [1,2,3,false]
+// Another approach
+
+const filterNosFromList = (list) => {
+  return list.filter((item) => typeof item === "number");
+};
+
+// Write a function that finds an element inside an unsorted list.
+
+const findFirstOccurence = (list, serachItem) => {
+  return list.findIndex((item) => item === searchItem);
+};
+
+console.log(findFirstOccurence([1, 2, 3, "a", "z"], "a")); // 4 - index where the element is found
+
+// Write a function that showcases the usage of closures.
