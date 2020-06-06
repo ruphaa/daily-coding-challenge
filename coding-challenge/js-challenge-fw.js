@@ -5,7 +5,7 @@ Given an array of integers, return a new array such that each element at index `
 For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
 */
 
-const generateProductArray = function(items) {
+const generateProductArray = function (items) {
   const productArr = [];
   let counter = 0;
   for (let i = 0; i <= items.length - 1; i++) {
@@ -47,7 +47,7 @@ Expected O/P :
 }
 */
 
-const isJSONValid = function(data) {
+const isJSONValid = function (data) {
   try {
     JSON.parse(data);
     return true;
@@ -56,7 +56,7 @@ const isJSONValid = function(data) {
   }
 };
 
-const replaceJSONPlaceholders = function(json) {
+const replaceJSONPlaceholders = function (json) {
   if (isJSONValid(json)) {
   }
 };
